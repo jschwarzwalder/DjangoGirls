@@ -1,1 +1,18 @@
+<html>
+<head>
+</head>
+<body>
 <h1>Have a cookie</h1>
+<p>Welcome to my blog</p>
+<div> 
+	{% for post in posts %}
+	<div>
+		<p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+	</div>
+		
+	{% endfor %}
+</div>
+</body>
+</html>
